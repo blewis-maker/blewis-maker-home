@@ -17,6 +17,8 @@ class User(AbstractUser):
     phone_number = models.CharField(_('phone number'), max_length=20, blank=True)
     date_of_birth = models.DateField(_('date of birth'), null=True, blank=True)
     is_verified = models.BooleanField(_('verified'), default=False)
+    reset_token = models.CharField(_('reset token'), max_length=32, blank=True)
+    reset_token_expires = models.DateTimeField(_('reset token expires'), null=True, blank=True)
     created_at = models.DateTimeField(_('created at'), auto_now_add=True)
     updated_at = models.DateTimeField(_('updated at'), auto_now=True)
 
