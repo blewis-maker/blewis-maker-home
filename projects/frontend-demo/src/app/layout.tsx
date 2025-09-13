@@ -3,8 +3,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { AuthProvider } from "@/contexts/AuthContext";
-import { CartProvider } from "@/contexts/CartContext";
+import { AuthProvider } from "../contexts/AuthContext";
+import { CartProvider } from "../contexts/CartContext";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "react-hot-toast";
 import { useState } from "react";

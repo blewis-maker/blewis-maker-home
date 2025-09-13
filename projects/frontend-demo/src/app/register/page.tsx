@@ -6,10 +6,10 @@ import { useRouter } from 'next/navigation';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
-import { useAuth } from '@/contexts/AuthContext';
-import Button from '@/components/ui/Button';
-import Input from '@/components/ui/Input';
-import LoadingSpinner from '@/components/ui/LoadingSpinner';
+import { useAuth } from '../contexts/AuthContext';
+import Button from '../components/ui/Button';
+import Input from '../components/ui/Input';
+import LoadingSpinner from '../components/ui/LoadingSpinner';
 import { EyeIcon, EyeSlashIcon } from '@heroicons/react/24/outline';
 import toast from 'react-hot-toast';
 
