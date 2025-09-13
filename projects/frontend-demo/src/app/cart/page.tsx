@@ -5,9 +5,9 @@ import { useQuery } from '@tanstack/react-query';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
-import Layout from '../../components/Layout';
-import Button from '../../components/ui/Button';
-import LoadingSpinner from '../../components/ui/LoadingSpinner';
+import Layout from '../components/Layout';
+import Button from '../components/ui/Button';
+import LoadingSpinner from '../components/ui/LoadingSpinner';
 import { 
   TrashIcon,
   MinusIcon,
@@ -15,9 +15,9 @@ import {
   ShoppingBagIcon,
   ArrowLeftIcon
 } from '@heroicons/react/24/outline';
-import { useCart } from '../../contexts/CartContext';
-import { useAuth } from '../../contexts/AuthContext';
-import { formatPrice } from '../../lib/utils';
+import { useCart } from '../contexts/CartContext';
+import { useAuth } from '../contexts/AuthContext';
+import { formatPrice } from '../lib/utils';
 import toast from 'react-hot-toast';
 
 export default function CartPage() {
