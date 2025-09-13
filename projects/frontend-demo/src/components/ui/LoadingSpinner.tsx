@@ -1,12 +1,11 @@
 import React from 'react';
-import { cn } from '@/lib/utils';
 
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg';
   className?: string;
 }
 
-const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ size = 'md', className }) => {
+const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ size = 'md', className = '' }) => {
   const sizes = {
     sm: 'h-4 w-4',
     md: 'h-8 w-8',
@@ -14,9 +13,9 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ size = 'md', className 
   };
 
   return (
-    <div className={cn('flex items-center justify-center', className)}>
+    <div className={`flex items-center justify-center ${className}`}>
       <svg
-        className={cn('animate-spin text-blue-600', sizes[size])}
+        className={`animate-spin text-blue-600 ${sizes[size]}`}
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 24 24"
