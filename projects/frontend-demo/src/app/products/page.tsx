@@ -3,19 +3,19 @@
 import React, { useState, useEffect } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { useSearchParams } from 'next/navigation';
-import Layout from '../components/Layout.tsx';
-import ProductCard from '../components/ProductCard.tsx';
-import LoadingSpinner from '../components/ui/LoadingSpinner.tsx';
-import Button from '../components/ui/Button.tsx';
-import Input from '../components/ui/Input.tsx';
+import Layout from '@/components/Layout';
+import ProductCard from '@/components/ProductCard';
+import LoadingSpinner from '@/components/ui/LoadingSpinner';
+import Button from '@/components/ui/Button';
+import Input from '@/components/ui/Input';
 import { 
   MagnifyingGlassIcon, 
   FunnelIcon,
   XMarkIcon,
   AdjustmentsHorizontalIcon
 } from '@heroicons/react/24/outline';
-import api from '../lib/api';
-import { Product, Category, Brand } from '../types';
+import api from '@/lib/api';
+import { Product, Category, Brand } from '@/types';
 
 interface ProductsResponse {
   count: number;

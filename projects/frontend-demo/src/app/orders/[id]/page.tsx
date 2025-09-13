@@ -5,9 +5,9 @@ import { useQuery } from '@tanstack/react-query';
 import { useParams, useRouter } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
-import Layout from '../../../components/Layout.tsx';
-import Button from '../../../components/ui/Button.tsx';
-import LoadingSpinner from '../../../components/ui/LoadingSpinner.tsx';
+import Layout from '@/components/Layout';
+import Button from '@/components/ui/Button';
+import LoadingSpinner from '@/components/ui/LoadingSpinner';
 import { 
   ArrowLeftIcon,
   TruckIcon,
@@ -18,10 +18,10 @@ import {
   CreditCardIcon,
   PrinterIcon
 } from '@heroicons/react/24/outline';
-import { useAuth } from '../../../contexts/AuthContext.tsx';
-import { formatPrice, formatDate, formatDateTime, getOrderStatusColor, getOrderStatusText } from '../../../lib/utils';
-import api from '../../../lib/api';
-import { Order } from '../../../types';
+import { useAuth } from '@/contexts/AuthContext';
+import { formatPrice, formatDate, formatDateTime, getOrderStatusColor, getOrderStatusText } from '@/lib/utils';
+import api from '@/lib/api';
+import { Order } from '@/types';
 
 interface OrderDetailResponse {
   order: Order;

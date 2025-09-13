@@ -2,8 +2,8 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { useAuth } from '../contexts/AuthContext.tsx';
-import { useCart } from '../contexts/CartContext.tsx';
+import { useAuth } from '@/contexts/AuthContext';
+import { useCart } from '@/contexts/CartContext';
 import { 
   ShoppingCartIcon, 
   UserIcon, 
