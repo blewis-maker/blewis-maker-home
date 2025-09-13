@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { Product } from '../types';
 import { formatPrice } from '../lib/utils';
 import Button from './ui/Button';
-import { useCart } from '../contexts/CartContext';
+import { useCart } from '../contexts/CartContext.tsx';
 import { ShoppingCartIcon, HeartIcon } from '@heroicons/react/24/outline';
 
 interface ProductCardProps {

@@ -3,11 +3,11 @@
 import React, { useState, useEffect } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { useSearchParams } from 'next/navigation';
-import Layout from '../components/Layout';
-import ProductCard from '../components/ProductCard';
-import LoadingSpinner from '../components/ui/LoadingSpinner';
-import Button from '../components/ui/Button';
-import Input from '../components/ui/Input';
+import Layout from '../components/Layout.tsx';
+import ProductCard from '../components/ProductCard.tsx';
+import LoadingSpinner from '../components/ui/LoadingSpinner.tsx';
+import Button from '../components/ui/Button.tsx';
+import Input from '../components/ui/Input.tsx';
 import { 
   MagnifyingGlassIcon, 
   FunnelIcon,

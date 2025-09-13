@@ -4,9 +4,9 @@ import React from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
-import Layout from '../components/Layout';
-import Button from '../components/ui/Button';
-import LoadingSpinner from '../components/ui/LoadingSpinner';
+import Layout from '../components/Layout.tsx';
+import Button from '../components/ui/Button.tsx';
+import LoadingSpinner from '../components/ui/LoadingSpinner.tsx';
 import { 
   EyeIcon,
   TruckIcon,
@@ -14,7 +14,7 @@ import {
   XCircleIcon,
   ClockIcon
 } from '@heroicons/react/24/outline';
-import { useAuth } from '../contexts/AuthContext';
+import { useAuth } from '../contexts/AuthContext.tsx';
 import { formatPrice, formatDate, getOrderStatusColor, getOrderStatusText } from '../lib/utils';
 import api from '../lib/api';
 import { Order } from '../types';
