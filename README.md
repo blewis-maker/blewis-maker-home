@@ -1,85 +1,179 @@
-# Brandan Lewis - Developer Portfolio
+# 🚀 Full-Stack E-Commerce Platform
 
-## 🚀 About Me
+A complete, production-ready e-commerce platform built with Django REST API and Next.js frontend.
 
-I'm a passionate developer specializing in **GIS ETL workflows**, **process automation**, **Machine Learning**, and **Full Stack development**. With expertise in Python, Node.js, and Next.js, I build solutions that bridge the gap between data processing and user experience.
+## 🌟 **Live Demo**
 
-## 🎯 Target Roles
+- **Frontend Demo**: [https://your-frontend-demo.vercel.app](https://your-frontend-demo.vercel.app)
+- **API Documentation**: [https://your-api-docs.vercel.app](https://your-api-docs.vercel.app)
 
-- **Python Developer** (Mid-Level to Senior)
-- **GIS Developer** (Mid-Level to Senior) 
-- **Full Stack Developer**
+## 🎯 **Project Overview**
 
-## 🛠️ Core Technologies
+This project demonstrates expertise in:
+- **Backend Development**: Django REST Framework, PostgreSQL, JWT Authentication
+- **Frontend Development**: Next.js 15, TypeScript, Tailwind CSS, React Query
+- **Payment Processing**: Stripe integration with webhooks
+- **Database Design**: Complex e-commerce data models with relationships
+- **API Design**: RESTful APIs with comprehensive documentation
 
-### Backend & APIs
-- **Python**: Django, FastAPI, Flask
-- **Node.js**: Express.js, NestJS
-- **Databases**: PostgreSQL, MongoDB, Redis
-- **APIs**: REST, GraphQL, WebSocket
+## 🛠️ **Tech Stack**
 
-### Frontend & Full Stack
-- **React**: Next.js, TypeScript
-- **Styling**: Tailwind CSS, Material-UI
-- **State Management**: Redux, Zustand, Context API
+### Backend
+- Django 5.0 + Django REST Framework
+- PostgreSQL with PostGIS extension
+- JWT Authentication
+- Stripe API integration
+- Redis for caching
+- Celery for background tasks
 
-### GIS & Data Processing
-- **GIS Libraries**: GDAL, GeoPandas, Shapely
-- **Data Processing**: Pandas, NumPy, Dask
-- **Visualization**: Folium, Plotly, Matplotlib
-- **Cloud GIS**: ArcGIS Online, Google Earth Engine
+### Frontend
+- Next.js 15 with App Router
+- TypeScript
+- Tailwind CSS
+- React Query + Context API
+- React Hook Form + Zod validation
+- Stripe Elements
 
-### DevOps & Deployment
-- **Cloud Platforms**: AWS, Google Cloud, Vercel
-- **Containerization**: Docker, Kubernetes
-- **CI/CD**: GitHub Actions, GitLab CI
-- **Monitoring**: Prometheus, Grafana
+## 🚀 **Quick Start**
 
-## 📁 Portfolio Projects
+### Backend Setup
 
-### 🐍 Python Projects
-- **[Django E-Commerce Platform](./projects/django-ecommerce/)** - Full-featured e-commerce solution with payment integration
-- **[FastAPI Data Pipeline](./projects/fastapi-pipeline/)** - High-performance API for real-time data processing
-- **[ML Model Deployment](./projects/ml-deployment/)** - End-to-end machine learning pipeline with MLOps
+1. **Clone and setup**
+   ```bash
+   git clone https://github.com/yourusername/blewis-maker-home.git
+   cd blewis-maker-home/projects/django-ecommerce
+   python -m venv venv
+   source venv/bin/activate
+   pip install -r requirements.txt
+   ```
 
-### 🗺️ GIS Projects
-- **[Spatial Data Pipeline](./projects/gis-pipeline/)** - Automated ETL workflows for geospatial data
-- **[Interactive Mapping App](./projects/mapping-app/)** - Real-time geospatial visualization platform
-- **[Location Intelligence API](./projects/location-api/)** - RESTful API for spatial analysis and geocoding
+2. **Database setup**
+   ```bash
+   python manage.py migrate
+   python manage.py createsuperuser
+   python manage.py runserver
+   ```
 
-### 🌐 Full Stack Projects
-- **[Next.js Dashboard](./projects/nextjs-dashboard/)** - Modern admin dashboard with real-time updates
-- **[Node.js Microservices](./projects/nodejs-microservices/)** - Scalable microservices architecture
-- **[Real-time Chat App](./projects/chat-app/)** - WebSocket-based messaging platform
+### Frontend Setup
 
-## 📊 Key Achievements
+1. **Setup frontend**
+   ```bash
+   cd ../frontend-demo
+   npm install
+   npm run dev
+   ```
 
-- **Process Automation**: Reduced manual data processing time by 80% through automated ETL workflows
-- **Performance Optimization**: Improved API response times by 60% through caching and database optimization
-- **Scalable Solutions**: Built systems handling 100K+ daily requests with 99.9% uptime
-- **Data Visualization**: Created interactive dashboards for complex geospatial datasets
+2. **Access the application**
+   - Frontend: http://localhost:3000
+   - Backend API: http://localhost:8000
+   - Admin: http://localhost:8000/admin
 
-## 🎓 Continuous Learning
+## 🔧 **Features**
 
-Currently expanding expertise in:
-- **Django**: Building comprehensive web applications
-- **Advanced GIS**: Cloud-based spatial analysis and visualization
-- **DevOps**: Infrastructure as Code and automated deployment pipelines
-- **Machine Learning**: MLOps and model deployment strategies
+### 🛍️ **E-Commerce Features**
+- Product Catalog with categories, brands, variants
+- Shopping Cart with real-time updates
+- Order Management with status tracking
+- Payment Processing with Stripe
+- User Management and authentication
+- Search & Filters
+- Responsive Design
 
-## 📞 Contact & Links
+### 🔐 **Security Features**
+- JWT Authentication
+- Password Security with bcrypt
+- CORS Protection
+- Input Validation
+- SQL Injection Protection
 
-- **GitHub**: [@blewis-maker](https://github.com/blewis-maker)
-- **LinkedIn**: [Brandan Lewis](https://linkedin.com/in/brandan-lewis)
-- **Email**: [Contact Me](mailto:your-email@example.com)
-- **Portfolio Website**: [Coming Soon]
+## 📚 **API Endpoints**
 
-## 📈 GitHub Stats
+### Authentication
+- `POST /api/auth/register/` - User registration
+- `POST /api/auth/login/` - User login
+- `GET /api/auth/profile/` - Get user profile
 
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=blewis-maker&show_icons=true&theme=dark&hide_border=true)
+### Products
+- `GET /api/products/` - List products
+- `GET /api/products/{id}/` - Get product details
+- `GET /api/categories/` - List categories
 
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=blewis-maker&layout=compact&theme=dark&hide_border=true)
+### Cart & Orders
+- `GET /api/cart/` - Get user's cart
+- `POST /api/cart/add/` - Add item to cart
+- `GET /api/orders/` - List user's orders
+- `POST /api/orders/` - Create new order
 
----
+### Payments
+- `POST /api/payments/create-payment-intent/` - Create Stripe payment
+- `POST /api/payments/webhook/` - Stripe webhook handler
 
-*This portfolio demonstrates my commitment to building robust, scalable solutions while continuously expanding my technical expertise.*
+## 🧪 **Testing**
+
+### Backend Tests
+```bash
+cd projects/django-ecommerce
+python manage.py test
+```
+
+### Frontend Tests
+```bash
+cd projects/frontend-demo
+npm run test
+```
+
+## 🚀 **Deployment**
+
+### Backend (Railway/Heroku)
+```bash
+python manage.py collectstatic
+python manage.py migrate
+# Deploy to your preferred platform
+```
+
+### Frontend (Vercel)
+```bash
+npm install -g vercel
+vercel
+```
+
+## 📁 **Project Structure**
+
+```
+blewis-maker-home/
+├── projects/
+│   ├── django-ecommerce/          # Backend API
+│   │   ├── accounts/              # User management
+│   │   ├── products/              # Product catalog
+│   │   ├── cart/                  # Shopping cart
+│   │   ├── orders/                # Order management
+│   │   └── payments/              # Payment processing
+│   └── frontend-demo/             # Next.js frontend
+│       ├── src/app/               # Next.js App Router
+│       ├── src/components/        # React components
+│       └── src/contexts/          # React contexts
+└── README.md
+```
+
+## 🎯 **Portfolio Highlights**
+
+This project demonstrates:
+
+✅ **Full-Stack Development**: Complete e-commerce solution  
+✅ **Modern Technologies**: Django, Next.js, TypeScript  
+✅ **Production Ready**: Error handling, testing, deployment  
+✅ **Security Best Practices**: JWT, validation, CORS  
+✅ **Payment Integration**: Stripe payment processing  
+✅ **Responsive Design**: Mobile-first UI/UX  
+
+**Perfect for showcasing skills to potential employers!** 🚀
+
+## 👨‍💻 **Author**
+
+**Brandan Lewis**
+- GitHub: [@brandanlewis](https://github.com/brandanlewis)
+- LinkedIn: [Brandan Lewis](https://linkedin.com/in/brandanlewis)
+
+## 📄 **License**
+
+MIT License - see LICENSE file for details.
