@@ -1,8 +1,8 @@
 'use client';
 
 import React, { createContext, useContext, useEffect, useState } from 'react';
-import { User, LoginForm, RegisterForm } from '@/types';
-import api from '@/lib/api';
+import { User, LoginForm, RegisterForm } from '../types';
+import api from '../lib/api';
 
 interface AuthContextType {
   user: User | null;

@@ -7,20 +7,20 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { loadStripe } from '@stripe/stripe-js';
 import { Elements, CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
-import Layout from '@/components/Layout';
-import Button from '@/components/ui/Button';
-import Input from '@/components/ui/Input';
-import LoadingSpinner from '@/components/ui/LoadingSpinner';
+import Layout from '../../components/Layout';
+import Button from '../../components/ui/Button';
+import Input from '../../components/ui/Input';
+import LoadingSpinner from '../../components/ui/LoadingSpinner';
 import { 
   CreditCardIcon,
   TruckIcon,
   ShieldCheckIcon,
   CheckCircleIcon
 } from '@heroicons/react/24/outline';
-import { useCart } from '@/contexts/CartContext';
-import { useAuth } from '@/contexts/AuthContext';
-import { formatPrice } from '@/lib/utils';
-import api from '@/lib/api';
+import { useCart } from '../../contexts/CartContext';
+import { useAuth } from '../../contexts/AuthContext';
+import { formatPrice } from '../../lib/utils';
+import api from '../../lib/api';
 import toast from 'react-hot-toast';
 
 const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!);
